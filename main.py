@@ -20,9 +20,10 @@ df_example_acc = df_example[df_example['sensor'] == 'AccelerometerUncalibrated']
 
 st.write(df_example_acc.head(5))
 
-st.subheader('Bumps per Ride')
+st.subheader('Vibrations per Ride')
 
 df_example_acc = df_example_acc['z']
 
-fig = df_example_acc.plot(figsize=(10,5))
-st.plotly_chart(fig)
+st.line_chart(data=df_example_acc)
+#fig = df_example_acc.plot(figsize=(10,5))
+#st.show(fig)
