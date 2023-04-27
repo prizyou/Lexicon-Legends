@@ -2,34 +2,27 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.title('Example')
+st.title('Fahrverhalten: Routen zur Universität')
 
-DATE_COLUMN = 'date/time'
-DATA = ('example.json')
-
-@st.cache_data
-def load_data(nrows):
-    data = pd.read_json(DATA_URL, nrows=nrows)
-    lowercase = lambda x: str(x).lower()
-    data.rename(lowercase, axis='columns', inplace=True)
-    data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
-    return data
+DATE_COLUMN = 'time'
+DATA = ('bike_ride.json')
 
 data_load_state = st.text('Loading data...')
-data = load_data(10000)
-data_load_state.text("Done! (using st.cache_data)")
 
-if st.checkbox('Show raw data'):
-    st.subheader('Raw data')
-    st.write(data)
+df_example = pd.read_json(DATA)
 
-st.subheader('Number of pickups by hour')
-hist_values = np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
-st.bar_chart(hist_values)
+#preprocessing data
+df_example['time'] = pd.to_datetime(df_example['time'])
+df_example = df_example.set_index('time')
+df_example['sensor'].unique()
 
-# Some number in the range 0-23
-hour_to_filter = st.slider('hour', 0, 23, 17)
-filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
+df_example_acc = df_example[df_example['sensor'] == 'AccelerometerUncalibrated']
 
-st.subheader('Map of all pickups at %s:00' % hour_to_filter)
-st.map(filtered_data)
+st.write(df_example_acc.head(5))
+
+st.subheader('Bumps per Ride')
+
+df_example_acc = df_example_acc['z']
+
+fig = df_example_acc.plot(figsize=(10,5))
+st.plotly_chart(fig)
