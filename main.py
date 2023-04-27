@@ -25,5 +25,4 @@ st.subheader('Vibrations per Ride')
 df_example_acc = df_example_acc['z']
 
 st.line_chart(data=df_example_acc)
-#fig = df_example_acc.plot(figsize=(10,5))
-#st.show(fig)
+
