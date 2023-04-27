@@ -20,7 +20,7 @@ df_example_acc = df_example[df_example['sensor'] == 'AccelerometerUncalibrated']
 
 st.write(df_example_acc.head(5))
 
-st.subheader('Vibrations per Ride')
+st.subheader('Vibrationen über die Fahrt')
 
 df_example_acc = df_example_acc['z']
 
