@@ -21,7 +21,7 @@ df_example_acc = df_example[df_example['sensor'] == 'AccelerometerUncalibrated']
 
 st.write(df_example_acc.head(5))
 
-if st.checkbox('Show raw data'):
+if st.checkbox('Include x,y Data'):
     st.subheader('Raw data')
     df_example_acc = df_example_acc[['z','x','y']]
     st.line_chart(data=df_example_acc)
