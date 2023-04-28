@@ -16,11 +16,19 @@ df_example['time'] = pd.to_datetime(df_example['time'])
 df_example = df_example.set_index('time')
 df_example['sensor'].unique()
 
+
 df_example_acc = df_example[df_example['sensor'] == 'AccelerometerUncalibrated']
 
 st.write(df_example_acc.head(5))
 
-st.subheader('Vibrationen über die Fahrt')
+if st.checkbox('Show raw data'):
+    st.subheader('Raw data')
+    df_example_acc = df_example_acc[['z','x','y']]
+    st.line_chart(data=df_example_acc)
+
+
+st.subheader('Aufgezeichnete Bewegungen über die Fahrt')
+st.write('z-Achse Ausschlag vertikal, x,y Ausschlag horizontal')
 
 df_example_acc = df_example_acc['z']
 
