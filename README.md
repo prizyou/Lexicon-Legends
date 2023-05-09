@@ -27,4 +27,4 @@ https://www.sciencedirect.com/science/article/pii/S1877050918318398
 
 Entwurf der Streamlit APP: Auswahl (Dropdown Menue zwischen 2-3 verschiedenen Modellen, womit man die Aktivitaeten erkennen kann) -> Label Fall vorhanden oder nicht (eventuell dann auch mit der Zeitangabe, wann dieser Fall vorgelegen hat)
 
-Zunaechst Datei Import ermoeglichen
+Zunaechst Datei Import ermoeglichen mit Kachel Drag&Drop Funktion
