@@ -1,5 +1,7 @@
 FaLL Detection for elderly people: 
 
+GOAL for app deployment is to increase accuracy in fall detection models by comparing different models 
+
 Documentation links to literature: 
 
 Fall Detection via Machine Learning: 
