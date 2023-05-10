@@ -1,4 +1,7 @@
 {
     "git.autofetch": true,
-    "git.autofetchPeriod": 60
+    "git.autofetchPeriod": 60,
+    "files.watcherExclude": {
+        "**/target": true
+    }
 }
