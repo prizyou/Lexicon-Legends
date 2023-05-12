@@ -25,7 +25,7 @@ https://www.researchgate.net/publication/308467199_Fall_Detection_Using_Machine_
     
 https://www.sciencedirect.com/science/article/pii/S1877050918318398
 
-
+https://kth.diva-portal.org/smash/get/diva2:1230962/FULLTEXT01.pdf
 
 Entwurf der Streamlit APP: Auswahl (Dropdown Menue zwischen 2-3 verschiedenen Modellen, womit man die Aktivitaeten erkennen kann) -> Label Fall vorhanden oder nicht (eventuell dann auch mit der Zeitangabe, wann dieser Fall vorgelegen hat)
 
