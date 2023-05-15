@@ -36,3 +36,5 @@ Zunaechst Datei Import ermoeglichen mit Kachel Drag&Drop Funktion
 Threshold Decision Tree recherchieren!: 
 
 =>>>>>>> https://github.com/ignaciocordova/Online-Fall-Detection-Python/blob/main/A%20smartphone-based%20online%20system%20for%20fall%20detection%20with%20alert%20notifications%20and%20contextual%20information%20of%20real-life%20falls.pdf
+
+https://jneuroengrehab.biomedcentral.com/articles/10.1186/s12984-021-00918-z
