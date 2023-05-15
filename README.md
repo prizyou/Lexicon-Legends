@@ -1,3 +1,5 @@
+Project Focus: Design a Application for elderly people to detect fall behavior 
+
 FaLL Detection for elderly people: 
 
 GOAL for app deployment is to increase accuracy in fall detection models by comparing different models 
