@@ -28,3 +28,5 @@ https://kth.diva-portal.org/smash/get/diva2:1230962/FULLTEXT01.pdf
 Entwurf der Streamlit APP: Auswahl (Dropdown Menue zwischen 2-3 verschiedenen Modellen, womit man die Aktivitaeten erkennen kann) -> Label Fall vorhanden oder nicht (eventuell dann auch mit der Zeitangabe, wann dieser Fall vorgelegen hat)
 
 Zunaechst Datei Import ermoeglichen mit Kachel Drag&Drop Funktion
+
+Threshold Decision Tree recherchieren!: 
