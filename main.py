@@ -116,8 +116,6 @@ for i in range(0, len(df_combined_fall)):
 
 df_combined = pd.concat([df_combined_walk, df_combined_fall])
 
-df_help= df_combined.set_index('time')
-df_help[['z','x','y']].plot(figsize=(10,10))
 
 df_combined.isnull().sum()
 df_combined.reset_index(inplace=True)
