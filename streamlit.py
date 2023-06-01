@@ -66,7 +66,8 @@ data_combine = pd.merge(data_acc, data_gyro, on='time')
 
 st.title("Vorhersage Label in Modell:")
 
-
+model_knn = knn.models.load_model('Model_knn')
+model_rf = rf.models.load_model('Model_rf')
 
 
 
