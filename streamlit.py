@@ -64,12 +64,11 @@ st.line_chart(data_gyro)
 st.write("Orientierungssensor")
 st.line_chart(data_or)  
 
-data_combine = pd.merge(data_acc, data_gyro, on='time')
+data_combine = pd.merge(data_acc, data_gyro, data_or, on='time')
 
 from tsfresh import extract_relevant_features
 
-features_filtered_direct = extract_relevant_features(data_combined, y,
-                                                     column_id='id', column_sort='time')
+features_filtered_direct = extract_relevant_features(data_combine,column_id='id', column_sort='time')
 
 st.title("Vorhersage Label in Modell:")
 
