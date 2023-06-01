@@ -33,8 +33,8 @@ if uploaded_file is not None:
 
     # Can be used wherever a "file-like" object is accepted:
     data = pd.read_json(uploaded_file)
-    st.write('Hochgeladene Rohdaten:')
-    st.dataframe(data)
+    
+    
 
 # Daten einlesen und aufbereiten
 data_load_state = st.text('Loading data...')
@@ -83,8 +83,8 @@ for i in range(0, len(data_combine)):
         var1 = var1 + 100
         id+=1
 
-
-st.write(data_combine)
+st.write('Hochgeladene Daten:')
+st.dataframe(data_combine)
 
 features_filtered_direct = extract_features(data_combine,column_id='id', column_sort='time')
 
