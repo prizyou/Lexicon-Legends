@@ -6,7 +6,7 @@ from io import StringIO
 import pickle as pk
 
 
-
+from tsfresh import extract_features
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import TimeSeriesSplit, train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -67,7 +67,7 @@ st.line_chart(data_or)
 
 data_combine = pd.merge(data_acc, data_gyro, on='time')
 
-from tsfresh import extract_relevant_features
+data_combine['id'] = 1
 
 features_filtered_direct = extract_features(data_combine,column_id='id', column_sort='time')
 
