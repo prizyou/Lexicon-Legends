@@ -69,7 +69,20 @@ data_combine = pd.merge(data_acc, data_gyro, on='time')
 
 data_combine = data_combine.reset_index(inplace=True)
 
-data_combine['id'] = 
+#Aufteilung des Datensatzes in Sequenzen
+data_combine['id'] = 0
+
+id = 1
+
+var1 = 100
+
+for i in range(0, len(data_combine)):
+    data_combine.iloc[i,7] = id
+    
+    if i >= var1: 
+        var1 = var1 + 100
+        id+=1
+
 
 st.write(data_combine)
 
