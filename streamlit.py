@@ -55,16 +55,18 @@ data_or = data_or[['qx','qz','qw','qy']]
 data_gyro.rename(columns={ 'z': 'gz' , 'x': 'gx' , 'y': 'gy'}, inplace=True)
 
 st.title("Datstellung der aufbereiteten Daten:")
-
+st.write("Beschleunigungssensor")
 st.line_chart(data_acc)
-
+st.write("Gyroskop")
 st.line_chart(data_gyro)    
-
+st.write("Orientierungssensor")
 st.line_chart(data_or)  
 
 data_combine = pd.merge(data_acc, data_gyro, on='time')
 
 st.title("Vorhersage Label in Modell:")
+
+
 
 
 
