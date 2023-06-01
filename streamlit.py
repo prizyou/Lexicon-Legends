@@ -37,4 +37,4 @@ data_load_state = st.text('Loading data...')
 # Daten einlesen und aufbereiten
 st.write('Hochgeladene Daten:')
 
-st.dataframe(dataframe.style.highlight_max(axis=0))
+#st.dataframe(dataframe.style.highlight_max(axis=0))
