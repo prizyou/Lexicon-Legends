@@ -3,6 +3,7 @@ import numpy as np
 import sklearn as sk
 import streamlit as st
 from io import StringIO
+import pickle as pk
 
 
 
@@ -73,17 +74,17 @@ features_filtered_direct = extract_relevant_features(data_combine,column_id='id'
 st.title("Vorhersage Label in Modell:")
 
 #Vortrainierte Modelle laden
-model_knn = sk.models.load_model('Model_knn')
-model_rf = sk.models.load_model('Model_rf')
+model_knn = pickle.load(open('knnpickle_file','rb'),)
+#model_rf = sk.models.load_model('Model_rf')
 
 #Schätzungsdaten rausziehen
 y_pred_knn = model_knn.predict(features_filtered_direct)
-y_pred_rf = model_rf.predict(features_filtered_direct)
+#y_pred_rf = model_rf.predict(features_filtered_direct)
 
 #Vorhersage Label in Modell
 st.write("Vorhersage Label in KNN-Modell:")
 st.write(y_pred_knn)
 
 st.write("Vorhersage Label in RF-Modell:")
-st.write(y_pred_rf)
+#st.write(y_pred_rf)
 
