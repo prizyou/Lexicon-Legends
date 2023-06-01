@@ -65,9 +65,14 @@ st.line_chart(data_gyro)
 st.write("Orientierungssensor")
 st.line_chart(data_or)  
 
+data_acc = data_acc.reset_index(inplace=True)
+data_gyro = data_gyro.reset_index(inplace=True)
+
 data_combine = pd.merge(data_acc, data_gyro, on='time')
 
-data_combine = data_combine.reset_index(inplace=True)
+#data_combine = data_combine.reset_index(inplace=True)
+
+st.write(data_combine)
 
 #Aufteilung des Datensatzes in Sequenzen
 data_combine['id'] = 0
