@@ -29,12 +29,12 @@ if uploaded_file is not None:
     st.write(string_data)
 
     # Can be used wherever a "file-like" object is accepted:
-    dataframe = pd.read_json(uploaded_file)
-    st.write(dataframe)
+    data = pd.read_json(uploaded_file)
+    st.write(data)
 
 data_load_state = st.text('Loading data...')
 
 # Daten einlesen und aufbereiten
 st.write('Hochgeladene Daten:')
 
-#st.dataframe(dataframe.style.highlight_max(axis=0))
+#st.dataframe(data.style.highlight_max(axis=0))
