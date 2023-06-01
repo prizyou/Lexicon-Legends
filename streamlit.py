@@ -4,6 +4,8 @@ import sklearn as sk
 import streamlit as st
 from io import StringIO
 
+
+
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import TimeSeriesSplit, train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -66,8 +68,18 @@ data_combine = pd.merge(data_acc, data_gyro, on='time')
 
 st.title("Vorhersage Label in Modell:")
 
-model_knn = knn.models.load_model('Model_knn')
-model_rf = rf.models.load_model('Model_rf')
+#Vortrainierte Modelle laden
+model_knn = sk.models.load_model('Model_knn')
+model_rf = sk.models.load_model('Model_rf')
 
+#Schätzungsdaten rausziehen
+y_pred_knn = model_knn.predict(X_test)
+y_pred_rf = model_rf.predict(X_test)
 
+#Vorhersage Label in Modell
+st.write("Vorhersage Label in KNN-Modell:")
+st.write(y_pred_knn)
+
+st.write("Vorhersage Label in RF-Modell:")
+st.write(y_pred_rf)
 
