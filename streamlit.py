@@ -67,7 +67,11 @@ st.line_chart(data_or)
 
 data_combine = pd.merge(data_acc, data_gyro, on='time')
 
-data_combine['id'] = 1
+data_combine = data_combine.reset_index(inplace=True)
+
+data_combine['id'] = 
+
+st.write(data_combine)
 
 features_filtered_direct = extract_features(data_combine,column_id='id', column_sort='time')
 
