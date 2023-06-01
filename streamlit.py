@@ -40,19 +40,31 @@ data['time'] = pd.to_datetime(data['time'])
 
 data = data.set_index('time')
 
-data_acc = df_walk[df_walk['sensor'] == 'AccelerometerUncalibrated']
+data_acc = data[data['sensor'] == 'AccelerometerUncalibrated']
 
-data_gyro = df_walk[df_walk['sensor'] == 'GyroscopeUncalibrated']
+data_gyro = data[data['sensor'] == 'GyroscopeUncalibrated']
 
-data_or = df_fall[df_fall['sensor'] == 'Orientation']
+data_or = data[data['sensor'] == 'Orientation']
+
+data_acc = data_acc[['z','x','y']]
+
+data_gyro = data_gyro[['z','x','y']]
+
+data_or = data_or[['qx','qz','qw','qy']]
+
+data_gyro.rename(columns={ 'z': 'gz' , 'x': 'gx' , 'y': 'gy'}, inplace=True)
+
+st.title("Datstellung der aufbereiteten Daten:")
+
+st.line_chart(data_acc)
+
+st.line_chart(data_gyro)    
+
+st.line_chart(data_or)  
+
+data_combine = pd.merge(data_acc, data_gyro, on='time')
+
+st.title("Vorhersage Label in Modell:")
 
 
-df_walk_acc = df_walk_acc[['z','x','y']]
 
-df_walk_gyro = df_walk_gyro[['z','x','y']]
-
-df_walk_or = df_walk_or[['qx','qz','qw','qy']]
-
-df_walk_gyro.rename(columns={ 'z': 'gz' , 'x': 'gx' , 'y': 'gy'}, inplace=True)
-
-df_combined_walk = pd.merge(df_walk_acc, df_walk_gyro, on='time')
