@@ -66,6 +66,11 @@ st.line_chart(data_or)
 
 data_combine = pd.merge(data_acc, data_gyro, on='time')
 
+from tsfresh import extract_relevant_features
+
+features_filtered_direct = extract_relevant_features(data_combined, y,
+                                                     column_id='id', column_sort='time')
+
 st.title("Vorhersage Label in Modell:")
 
 #Vortrainierte Modelle laden
@@ -73,8 +78,8 @@ model_knn = sk.models.load_model('Model_knn')
 model_rf = sk.models.load_model('Model_rf')
 
 #Schätzungsdaten rausziehen
-y_pred_knn = model_knn.predict(X_test)
-y_pred_rf = model_rf.predict(X_test)
+y_pred_knn = model_knn.predict(features_filtered_direct)
+y_pred_rf = model_rf.predict(features_filtered_direct)
 
 #Vorhersage Label in Modell
 st.write("Vorhersage Label in KNN-Modell:")
