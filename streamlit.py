@@ -57,7 +57,7 @@ data_or = data_or[['qx','qz','qw','qy']]
 
 data_gyro.rename(columns={ 'z': 'gz' , 'x': 'gx' , 'y': 'gy'}, inplace=True)
 
-st.title("Datstellung der aufbereiteten Daten:")
+st.title("Darstellung der aufbereiteten Daten:")
 st.write("Beschleunigungssensor")
 st.line_chart(data_acc)
 st.write("Gyroskop")
@@ -65,16 +65,16 @@ st.line_chart(data_gyro)
 st.write("Orientierungssensor")
 st.line_chart(data_or)  
 
-data_combine = pd.merge(data_acc, data_gyro, data_or, on='time')
+data_combine = pd.merge(data_acc, data_gyro, on='time')
 
 from tsfresh import extract_relevant_features
 
-features_filtered_direct = extract_relevant_features(data_combine,column_id='id', column_sort='time')
+features_filtered_direct = extract_features(data_combine,column_id='id', column_sort='time')
 
 st.title("Vorhersage Label in Modell:")
 
 #Vortrainierte Modelle laden
-model_knn = pickle.load(open('knnpickle_file','rb'),)
+model_knn = pk.load(open('knnpickle_file','rb'),)
 #model_rf = sk.models.load_model('Model_rf')
 
 #Schätzungsdaten rausziehen
