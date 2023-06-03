@@ -6,4 +6,3 @@ sklearn
 matplotlib
 tsfresh
 st_pages
-```
