@@ -5,7 +5,6 @@ import streamlit as st
 from io import StringIO
 import pickle as pk
 
-
 from tsfresh import extract_features
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import TimeSeriesSplit, train_test_split
