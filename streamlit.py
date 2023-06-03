@@ -12,9 +12,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
 with st.sidebar:
-    add_button = st.button("Requirements.txt")
-    add_button2 = st.button("Modelle")
-    add_button3 = st.button("Theorie")
+    add_button0 = st.button("Jupyter Notebook")
+    add_button1 = st.button("Requirements.txt")
+    add_button3 = st.button("Theorie hinter der Anwendung")
 
 
 # Feld für Drag&Drop fuer Testdaten
@@ -132,4 +132,3 @@ if uploaded_file is not None:
         #st.write(y_pred_rf)
 
         st.caption("In X der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
-
