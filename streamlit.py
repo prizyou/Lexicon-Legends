@@ -74,7 +74,7 @@ if uploaded_file is not None:
 
         data_combine = pd.merge(data_acc, data_gyro, left_index=True, right_index=True)
 
-        st.write(data_combine)
+        #st.write(data_combine)
 
         #Aufteilung des Datensatzes in Sequenzen
         data_combine['id'] = 0
@@ -84,7 +84,7 @@ if uploaded_file is not None:
         var1 = 100
 
         for i in range(0, len(data_combine)):
-            data_combine.iloc[i,7] = id
+            data_combine.iloc[i,6] = id
             
             if i >= var1: 
                 var1 = var1 + 100
@@ -93,9 +93,12 @@ if uploaded_file is not None:
         st.write('Hochgeladene Daten:')
         st.dataframe(data_combine)
 
-        features_filtered_direct = extract_features(data_combine,column_id='id', column_sort='time')
-
         st.title("Vorhersage Label in Modell:")
+
+        data_combine = data_combine.reset_index(inplace=False)
+
+        features_filtered_direct = extract_features(data_combine,column_id='id', column_sort='time')
+        st.write(features_filtered_direct)
 
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
