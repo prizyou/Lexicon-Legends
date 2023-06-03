@@ -47,7 +47,11 @@ if uploaded_file is not None:
 
         data_or = data[data['sensor'] == 'Orientation']
 
-        data_gravity = data[data['sensor'] == 'Gravity']
+        data_gravity = data[data['sensor'] == 'GravityUncalibrated']
+
+        st.write("Die folgenden Sensoren wurden aufgezeichnet:")
+        
+        st.write(data['sensor'].unique())
 
         data_acc = data_acc[['z','x','y']]
 
