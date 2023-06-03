@@ -96,7 +96,7 @@ if uploaded_file is not None:
         st.title("Vorhersage Label in Modell:")
         st.write("Sequenzen der übertragenen Aufzeichnungen:")
 
-        st.write(data_combine['id'].unique())
+        st.title("In X der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
 
         data_combine = data_combine.reset_index(inplace=False)
         
