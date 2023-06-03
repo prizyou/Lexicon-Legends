@@ -66,14 +66,14 @@ if uploaded_file is not None:
         data_gyro.rename(columns={ 'z': 'gz' , 'x': 'gx' , 'y': 'gy'}, inplace=True)
 
         st.write("Darstellung der aufbereiteten Daten:")
-        st.write("Beschleunigungssensor")
-        st.line_chart(data_acc)
-        st.write("Gyroskop")
-        st.line_chart(data_gyro)    
-        st.write("Orientierungssensor")
-        st.line_chart(data_or)
-        st.write("Gravitationssensor")  
-        st.line_chart(data_gravity)
+        if st.button('Beschleunigungssensor'):
+            st.line_chart(data_acc)
+        if st.button('Gyroskop'):
+            st.line_chart(data_gyro)    
+        if st.button('Orientation'):        
+            st.line_chart(data_or)
+        if st.button('Gravity'):
+            st.line_chart(data_gravity)
 
         #data_acc = data_acc.reset_index(inplace=True)
         #data_gyro = data_gyro.reset_index(inplace=True)
