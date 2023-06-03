@@ -106,8 +106,11 @@ if uploaded_file is not None:
         
         features = extract_features(data_combine,column_id='id', column_sort='time')
         
+        while(features is None):
+            st.warning("Features werden extrahiert...")    
+
         st.success("Features extrahiert :)")
-        st.write(features_filtered_direct)
+        
 
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
