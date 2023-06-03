@@ -12,10 +12,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
 with st.sidebar:
-    add_button = st.button(
-        "Requirements",
-        "Theorie",
-    )
+    add_button = st.button("Requirements.txt")
+    add_button2 = st.button("Modelle")
+    add_button3 = st.button("Theorie")
 
 
 # Feld für Drag&Drop fuer Testdaten
