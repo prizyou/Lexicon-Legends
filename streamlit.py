@@ -109,8 +109,10 @@ if uploaded_file is not None:
         while(features is None):
             st.warning("Features werden extrahiert...")    
 
-        st.success("Features extrahiert :)")
+        st.success("Features extrahiert! :)")
         
+        if st.button('Show Features'):
+            st.write(features)
 
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
