@@ -104,8 +104,6 @@ if uploaded_file is not None:
         if st.button('Sequenzen'):
             st.write(data_combine)
 
-        st.title("In X der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
-
         data_combine = data_combine.reset_index(inplace=False)
         
         features = extract_features(data_combine,column_id='id', column_sort='time')
@@ -132,4 +130,6 @@ if uploaded_file is not None:
 
         st.write("Vorhersage Label in RF-Modell:")
         #st.write(y_pred_rf)
+
+        st.caption("In X der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
 
