@@ -11,6 +11,12 @@ from sklearn.model_selection import TimeSeriesSplit, train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
+with st.sidebar:
+    add_button = st.button(
+        "Choose a shipping method",
+        ("Standard (5-15 days)", "Express (2-5 days)")
+    )
+
 
 # Feld für Drag&Drop fuer Testdaten
 uploaded_file = st.file_uploader("Choose a file as .JSON")
