@@ -104,7 +104,7 @@ if uploaded_file is not None:
 
         data_combine = data_combine.reset_index(inplace=False)
         
-        features_filtered_direct = extract_features(data_combine,column_id='id', column_sort='time')
+        features = extract_features(data_combine,column_id='id', column_sort='time')
         
         st.write("Extrahierte Features:")
         st.write(features_filtered_direct)
@@ -114,8 +114,8 @@ if uploaded_file is not None:
         #model_rf = pk.load(open('rfpickle_file','rb'),)
 
         #Schätzungsdaten rausziehen
-        y_pred_knn = model_knn.predict(features_filtered_direct)
-        #y_pred_rf = model_rf.predict(features_filtered_direct)
+        y_pred_knn = model_knn.predict(features)
+        #y_pred_rf = model_rf.predict(features)
 
         #Vorhersage Label in Modell
         st.write("Vorhersage Label in KNN-Modell:")
