@@ -96,7 +96,7 @@ if uploaded_file is not None:
                 var1 = var1 + 100
                 id+=1
 
-        if st.button('Features'):
+        if st.button('Daten als Dataframe'):
             st.dataframe(data_combine)
 
         st.title("Vorhersage der Labels in den Modellen:")
