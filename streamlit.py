@@ -11,16 +11,17 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import TimeSeriesSplit, train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
-
+from st_pages import Page, show_pages, add_page_title
 
 
 st.title('Sturzerkennung mit Daten aus der Smartphone-App SensorLogger')
 
-with st.sidebar:
-    add_radio = st.radio(
-        "Choose a shipping method",
-        ("Standard (5-15 days)", "Express (2-5 days)")
-    )
+show_pages(
+    [
+        Page("streamlit_app.py", "Home", "🏠"),
+        Page("Requirements.txt", "Reqirements", ":books:"),
+    ]
+)
 
 
 # Feld für Drag&Drop fuer Testdaten
