@@ -97,7 +97,7 @@ if uploaded_file is not None:
         st.write('Hochgeladene Daten:')
         st.dataframe(data_combine)
 
-        st.title("Vorhersage der Label in Modell:")
+        st.title("Vorhersage der Labels in Modell:")
         st.write("Sequenzen der übertragenen Aufzeichnungen:")
 
         st.title("In X der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
