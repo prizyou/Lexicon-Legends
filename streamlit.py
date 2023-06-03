@@ -16,6 +16,13 @@ from sklearn.svm import SVC
 
 st.title('Sturzerkennung mit Daten aus der Smartphone-App SensorLogger')
 
+with st.sidebar:
+    add_radio = st.radio(
+        "Choose a shipping method",
+        ("Standard (5-15 days)", "Express (2-5 days)")
+    )
+
+
 # Feld für Drag&Drop fuer Testdaten
 uploaded_file = st.file_uploader("Choose a file as .JSON")
 if uploaded_file is not None:
