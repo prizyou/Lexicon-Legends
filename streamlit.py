@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import sklearn as sk
+
 import streamlit as st
 from io import StringIO
 import pickle as pk
