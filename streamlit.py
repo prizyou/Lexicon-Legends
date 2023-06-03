@@ -106,7 +106,7 @@ if uploaded_file is not None:
         
         features = extract_features(data_combine,column_id='id', column_sort='time')
         
-        st.write("Extrahierte Features:")
+        st.success("Features extrahiert :)")
         st.write(features_filtered_direct)
 
         #Vortrainierte Modelle laden
