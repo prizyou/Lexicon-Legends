@@ -13,8 +13,8 @@ from sklearn.svm import SVC
 
 with st.sidebar:
     add_button = st.button(
-        "Choose a shipping method",
-        ("Standard (5-15 days)", "Express (2-5 days)")
+        "Requirements",
+        "Theorie",
     )
 
 
