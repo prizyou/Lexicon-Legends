@@ -96,10 +96,10 @@ if uploaded_file is not None:
         st.title("Vorhersage Label in Modell:")
 
         data_combine = data_combine.reset_index(inplace=False)
-        st.write("hier")
+        
         features_filtered_direct = extract_features(data_combine,column_id='id', column_sort='time')
         st.write(features_filtered_direct)
-
+        st.write("hier")
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
         #model_rf = sk.models.load_model('Model_rf')
