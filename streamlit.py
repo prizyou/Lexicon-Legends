@@ -100,10 +100,14 @@ if uploaded_file is not None:
             st.dataframe(data_combine)
 
         st.title("Vorhersage der Labels in den Modellen:")
+
         st.write("Sequenzen der übertragenen Aufzeichnungen:")
 
-        if st.button('Sequenzen'):
+        if st.button('Sequenzen als Dataframe'):
             st.write(data_combine)
+
+        if st.button('Sequenzen als Grafik'):
+            st.line_chart(data_combine)    
 
         data_combine = data_combine.reset_index(inplace=False)
         
