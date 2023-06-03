@@ -1,4 +1,4 @@
-streamlit==1.20.0
+streamlit
 pydeck==0.7.1
 pandas
 numpy
