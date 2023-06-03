@@ -5,24 +5,15 @@ import streamlit as st
 from io import StringIO
 import pickle as pk
 
-from streamlit.components.v1 import html
 from tsfresh import extract_features
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import TimeSeriesSplit, train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
-def open_page(url):
-    open_script= """
-        <script type="text/javascript">
-            window.open('%s', '_blank').focus();
-        </script>
-    """ % (url)
-    html(open_script)
-
 
 with st.sidebar:
-    add_button0 = st.button("Jupyter Notebook", on_click=open_page('www.google.de'))
+    add_button0 = st.button("Jupyter Notebook")
     add_button1 = st.button("Requirements.txt")
     add_button3 = st.button("Theorie hinter der Anwendung")
 
