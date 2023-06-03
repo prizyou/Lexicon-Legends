@@ -96,8 +96,8 @@ if uploaded_file is not None:
                 var1 = var1 + 100
                 id+=1
 
-        st.write('Hochgeladene Daten:')
-        st.dataframe(data_combine)
+        if st.button('Features'):
+            st.dataframe(data_combine)
 
         st.title("Vorhersage der Labels in den Modellen:")
         st.write("Sequenzen der übertragenen Aufzeichnungen:")
