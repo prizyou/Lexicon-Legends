@@ -106,11 +106,11 @@ if uploaded_file is not None:
         
         features_filtered_direct = extract_features(data_combine,column_id='id', column_sort='time')
         st.write(features_filtered_direct)
-        st.write("hier")
 
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
-        
+        st.write("hoer")
+
         #Schätzungsdaten rausziehen
         y_pred_knn = model_knn.predict(features_filtered_direct)
         #y_pred_rf = model_rf.predict(features_filtered_direct)
