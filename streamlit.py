@@ -98,7 +98,7 @@ if uploaded_file is not None:
         st.write('Hochgeladene Daten:')
         st.dataframe(data_combine)
 
-        st.title("Vorhersage der Labels in Modell:")
+        st.title("Vorhersage der Labels in den Modellen:")
         st.write("Sequenzen der übertragenen Aufzeichnungen:")
 
         if st.button('Sequenzen'):
