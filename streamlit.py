@@ -101,7 +101,7 @@ if uploaded_file is not None:
         st.title("Vorhersage der Labels in Modell:")
         st.write("Sequenzen der übertragenen Aufzeichnungen:")
 
-        if st.button('Show sequences'):
+        if st.button('Sequenzen'):
             st.write(data_combine)
 
         st.title("In X der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
@@ -115,7 +115,7 @@ if uploaded_file is not None:
 
         st.success("Features extrahiert! :)")
         
-        if st.button('Show Features'):
+        if st.button('Features'):
             st.write(features)
 
         #Vortrainierte Modelle laden
