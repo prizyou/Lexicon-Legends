@@ -11,8 +11,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import TimeSeriesSplit, train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import confusion_matrix
+
+
 
 st.title('Sturzerkennung mit Daten aus der Smartphone-App SensorLogger')
 
@@ -108,11 +108,9 @@ if uploaded_file is not None:
         #st.write(features_filtered_direct)
         #st.write("hier")
 
-
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
-        #model_rf = sk.models.load_model('Model_rf')
-
+        
         #Schätzungsdaten rausziehen
         y_pred_knn = model_knn.predict(features_filtered_direct)
         #y_pred_rf = model_rf.predict(features_filtered_direct)
