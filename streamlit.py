@@ -128,7 +128,7 @@ if uploaded_file is not None:
         st.success("Analyse der Daten mit KNN- und RandomForest Modell...")
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
-        #model_rf = pk.load(open('rfpickle_file','rb'),)
+        model_rf = pk.load(open('rfpickle_file','rb'),)
         featuresList = pk.load(open('featuresList_file','rb'),)
         
         #st.write(featuresList)
@@ -138,7 +138,7 @@ if uploaded_file is not None:
 
         #Schätzungsdaten rausziehen
         y_pred_knn = model_knn.predict(features[my_array[0]])
-        #y_pred_rf = model_rf.predict(features)
+        y_pred_rf = model_rf.predict(features[my_array[0]])
 
         #Vorhersage Label in Modell
         st.write("Vorhersage Label in KNN-Modell:")
@@ -146,5 +146,5 @@ if uploaded_file is not None:
         st.caption("In "+ str(y_pred_knn.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
 
         st.write("Vorhersage Label in RF-Modell:")
-        #st.write(y_pred_rf)
-        #st.caption("In"+ str(y_pred_rf) + "der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
+        st.write(y_pred_rf)
+        st.caption("In"+ str(y_pred_rf) + "der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
