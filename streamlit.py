@@ -11,6 +11,12 @@ from sklearn.model_selection import TimeSeriesSplit, train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 
+set.set_page_config(
+    page_title="Sturzerkennung",
+    page_icon=":runner:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
 
 with st.sidebar:
     add_button0 = st.button("Jupyter Notebook")
