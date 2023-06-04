@@ -18,10 +18,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-with st.sidebar:
-    add_button0 = st.button("Jupyter Notebook")
-    add_button1 = st.button("Requirements.txt")
-    add_button3 = st.button("Theorie hinter der Anwendung")
+st.title("Sturzerkennun:")
 
 
 # Feld für Drag&Drop fuer Testdaten
