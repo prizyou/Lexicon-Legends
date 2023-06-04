@@ -147,4 +147,4 @@ if uploaded_file is not None:
 
         st.write("Vorhersage Label in RF-Modell:")
         st.write(y_pred_rf)
-        st.caption("In"+ str(y_pred_rf) + "der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
+        st.caption("In "+ str(y_pred_rf.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
