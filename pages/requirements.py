@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Requirements :question:")
+st.title("Requirements :question::wink:")
 st.write("The following requirements are needed to run the application:")
 st.markdown("- Python 3.7.9")
 st.markdown("- Streamlit")
