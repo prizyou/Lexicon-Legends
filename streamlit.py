@@ -18,7 +18,7 @@ st.set_page_config(
 )
 
 st.title("Sturzerkennun:")
-
+st.sidebar.success("Klicke dich durch die Applikationsdokumentation")
 
 # Feld für Drag&Drop fuer Testdaten
 uploaded_file = st.file_uploader("Choose a file as .JSON")
