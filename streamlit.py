@@ -122,7 +122,7 @@ if uploaded_file is not None:
 
         st.success("Features extrahiert! :)")
         
-        if st.button('Features'):
+        if st.button('Features als DataFrame'):
             st.write(features)
 
         st.success("Analyse der Daten mit KNN- und RandomForest Modell...")
@@ -133,7 +133,9 @@ if uploaded_file is not None:
         
         #st.write(featuresList)
         my_array = np.asarray(featuresList)
-        st.write(my_array[0])
+        
+        if st.button('Features als Liste'):
+            st.write(my_array[0])
         #st.write(type(my_array))
 
         #Schätzungsdaten rausziehen
