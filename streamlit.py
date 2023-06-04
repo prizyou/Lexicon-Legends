@@ -14,10 +14,19 @@ from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import confusion_matrix
 
-st.title('Sturzerkennung mit Daten aus der Smartphone-App SensorLogger')
+st.set_page_config(
+    page_title="Sturzerkennung",
+    page_icon=":runner:",
+    layout="wide",
+)
+
+st.title("Sturzerkennung mit FaLLDetector:copyright:  :mag:")
+st.caption("Ein Projekt von: Anitan, Paul, Max")
+
+st.sidebar.success("Klicke durch die Dokumentation...")
 
 # Feld für Drag&Drop fuer Testdaten
-uploaded_file = st.file_uploader("Choose a file as .JSON")
+uploaded_file = st.file_uploader("Laden Sie eine Datei als .JSON File hoch, um diese auf Stürze zu analysieren:")
 if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
@@ -104,11 +113,17 @@ if uploaded_file is not None:
 
         data_combine = data_combine.reset_index(inplace=False)
         
-        features_filtered_direct = extract_features(data_combine,column_id='id', column_sort='time')
-        #st.write(features_filtered_direct)
-        #st.write("hier")
+        features = extract_features(data_combine,column_id='id', column_sort='time')
+        
+        while(features is None):
+            st.warning("Features werden extrahiert...")    
 
+        st.success("Features extrahiert! :)")
+        
+        if st.button('Features'):
+            st.write(features)
 
+        st.success("Analyse der Daten mit KNN- und RandomForest Modell...")
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
         #model_rf = sk.models.load_model('Model_rf')
