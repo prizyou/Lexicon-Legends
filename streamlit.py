@@ -132,10 +132,11 @@ if uploaded_file is not None:
         featuresList = pk.load(open('featuresList_file','rb'),)
         
         st.write(featuresList)
-        st.write(type(featuresList))
+        my_array = np.asarray(featuresList)
+        st.write(type(my_array))
 
         #Schätzungsdaten rausziehen
-        y_pred_knn = model_knn.predict(featuresList)
+        y_pred_knn = model_knn.predict(my_array)
         #y_pred_rf = model_rf.predict(features)
 
         #Vorhersage Label in Modell
