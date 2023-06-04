@@ -15,7 +15,6 @@ st.set_page_config(
     page_title="Sturzerkennung",
     page_icon=":runner:",
     layout="wide",
-    initial_sidebar_state="expanded",
 )
 
 st.title("Sturzerkennun:")
