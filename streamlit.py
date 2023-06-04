@@ -5,11 +5,14 @@ import streamlit as st
 from io import StringIO
 import pickle as pk
 
+
 from tsfresh import extract_features
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import TimeSeriesSplit, train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import confusion_matrix
 
 st.set_page_config(
     page_title="Sturzerkennung",
@@ -70,14 +73,14 @@ if uploaded_file is not None:
         data_gyro.rename(columns={ 'z': 'gz' , 'x': 'gx' , 'y': 'gy'}, inplace=True)
 
         st.write("Darstellung der aufbereiteten Daten:")
-        if st.button('Beschleunigungssensor'):
-            st.line_chart(data_acc)
-        if st.button('Gyroskop'):
-            st.line_chart(data_gyro)    
-        if st.button('Orientation'):        
-            st.line_chart(data_or)
-        if st.button('Gravity'):
-            st.line_chart(data_gravity)
+        st.write("Beschleunigungssensor")
+        st.line_chart(data_acc)
+        st.write("Gyroskop")
+        st.line_chart(data_gyro)    
+        st.write("Orientierungssensor")
+        st.line_chart(data_or)
+        st.write("Gravitationssensor")  
+        st.line_chart(data_gravity)
 
         #data_acc = data_acc.reset_index(inplace=True)
         #data_gyro = data_gyro.reset_index(inplace=True)
@@ -100,18 +103,13 @@ if uploaded_file is not None:
                 var1 = var1 + 100
                 id+=1
 
-        if st.button('Daten als Dataframe'):
-            st.dataframe(data_combine)
+        st.write('Hochgeladene Daten:')
+        st.dataframe(data_combine)
 
-        st.title("Vorhersage der Labels in den Modellen:")
-
+        st.title("Vorhersage der Label in Modell:")
         st.write("Sequenzen der übertragenen Aufzeichnungen:")
 
-        if st.button('Sequenzen als Dataframe'):
-            st.write(data_combine)
-
-        if st.button('Sequenzen als Grafik'):
-            st.line_chart(data_combine)    
+        st.title("In X der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
 
         data_combine = data_combine.reset_index(inplace=False)
         
@@ -128,17 +126,16 @@ if uploaded_file is not None:
         st.success("Analyse der Daten mit KNN- und RandomForest Modell...")
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
-        #model_rf = pk.load(open('rfpickle_file','rb'),)
+        #model_rf = sk.models.load_model('Model_rf')
 
         #Schätzungsdaten rausziehen
-        y_pred_knn = model_knn.predict(features)
-        #y_pred_rf = model_rf.predict(features)
+        y_pred_knn = model_knn.predict(features_filtered_direct)
+        #y_pred_rf = model_rf.predict(features_filtered_direct)
 
         #Vorhersage Label in Modell
         st.write("Vorhersage Label in KNN-Modell:")
         st.write(y_pred_knn)
-        st.caption("In"+ str(y_pred_knn) + "der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
 
         st.write("Vorhersage Label in RF-Modell:")
         #st.write(y_pred_rf)
-        #st.caption("In"+ str(y_pred_rf) + "der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
+
