@@ -129,7 +129,7 @@ if uploaded_file is not None:
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
         #model_rf = pk.load(open('rfpickle_file','rb'),)
-        featuresList = pk.load(open('featuresList','rb'),)
+        featuresList = pk.load(open('featuresList_file','rb'),)
 
         #Schätzungsdaten rausziehen
         y_pred_knn = model_knn.predict(features[featuresList])
