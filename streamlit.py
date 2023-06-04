@@ -17,7 +17,7 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("Sturzerkennun:")
+st.title("Sturzerkennung:")
 st.sidebar.success("Klicke durch die Dokumentation...")
 
 # Feld für Drag&Drop fuer Testdaten
