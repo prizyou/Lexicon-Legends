@@ -17,7 +17,7 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("Sturzerkennung mit FallDetect:copyright:")
+st.title("Sturzerkennung mit FaLLDetector:copyright:")
 st.caption("Ein Projekt von: Anitan, Paul, Max")
 
 st.sidebar.success("Klicke durch die Dokumentation...")
