@@ -132,6 +132,7 @@ if uploaded_file is not None:
         featuresList = pk.load(open('featuresList_file','rb'),)
         
         st.write(featuresList)
+        st.write(type(featuresList))
 
         #Schätzungsdaten rausziehen
         y_pred_knn = model_knn.predict(featuresList)
