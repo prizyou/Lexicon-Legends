@@ -136,7 +136,7 @@ if uploaded_file is not None:
         st.write(my_array)
         st.write(type(my_array))
 
-        liste_neu = my_array.values.tolist()
+        liste_neu = my_array.tolist()
         st.write(liste_neu)
 
         #Schätzungsdaten rausziehen
