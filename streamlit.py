@@ -136,6 +136,9 @@ if uploaded_file is not None:
         st.write(my_array)
         st.write(type(my_array))
 
+        liste_neu = my_array.values.tolist()
+        st.write(liste_neu)
+
         #Schätzungsdaten rausziehen
         y_pred_knn = model_knn.predict(features[featuresList])
         #y_pred_rf = model_rf.predict(features)
