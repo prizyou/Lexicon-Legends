@@ -140,7 +140,7 @@ if uploaded_file is not None:
         st.write(liste_neu)
 
         #Schätzungsdaten rausziehen
-        y_pred_knn = model_knn.predict(features[featuresList])
+        y_pred_knn = model_knn.predict(features[my_array[0]])
         #y_pred_rf = model_rf.predict(features)
 
         #Vorhersage Label in Modell
