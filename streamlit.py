@@ -17,7 +17,9 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("Sturzerkennung:")
+st.title("Sturzerkennung mit FallDetect:")
+st.caption("Ein Projekt von: Anitan, Paul, Max")
+
 st.sidebar.success("Klicke durch die Dokumentation...")
 
 # Feld für Drag&Drop fuer Testdaten
