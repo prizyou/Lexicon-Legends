@@ -143,7 +143,7 @@ if uploaded_file is not None:
         #Vorhersage Label in Modell
         st.write("Vorhersage Label in KNN-Modell:")
         st.write(y_pred_knn)
-        st.caption("In"+ str(y_pred_knn.sum()) + "der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
+        st.caption("In "+ str(y_pred_knn.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
 
         st.write("Vorhersage Label in RF-Modell:")
         #st.write(y_pred_rf)
