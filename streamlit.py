@@ -131,7 +131,7 @@ if uploaded_file is not None:
         #model_rf = pk.load(open('rfpickle_file','rb'),)
         featuresList = pk.load(open('featuresList_file','rb'),)
         
-        st.write(type(featuresList))
+        st.write(featuresList)
         #my_array = np.asarray(featuresList)
         #st.write(my_array)
         #st.write(type(my_array))
