@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Requirements:check:")
+st.title("Requirements :white_check_mark:")
 st.write("The following requirements are needed to run the application:")
 st.markdown("- Python 3.7.9")
 st.markdown("- Streamlit")
