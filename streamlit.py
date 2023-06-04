@@ -130,10 +130,11 @@ if uploaded_file is not None:
         model_knn = pk.load(open('knnpickle_file','rb'),)
         #model_rf = pk.load(open('rfpickle_file','rb'),)
         featuresList = pk.load(open('featuresList_file','rb'),)
-        st.write(featuresList.dtype)
+        
+        st.write(featuresList)
 
         #Schätzungsdaten rausziehen
-        y_pred_knn = model_knn.predict(features[featuresList])
+        y_pred_knn = model_knn.predict(featuresList)
         #y_pred_rf = model_rf.predict(features)
 
         #Vorhersage Label in Modell
