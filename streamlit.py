@@ -17,13 +17,13 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("Sturzerkennung mit FallDetect:")
+st.title("Sturzerkennung mit FallDetect:copyright:")
 st.caption("Ein Projekt von: Anitan, Paul, Max")
 
 st.sidebar.success("Klicke durch die Dokumentation...")
 
 # Feld für Drag&Drop fuer Testdaten
-uploaded_file = st.file_uploader("Laden Sie eine Datei als .JSON hoch:")
+uploaded_file = st.file_uploader("Laden Sie eine Datei als .JSON hoch, um diese auf Stürze zu analysieren:")
 if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
