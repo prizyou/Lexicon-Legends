@@ -1,6 +1,6 @@
 import streamlit as st 
 
-st.title("Theoretische Überlegungen hinter dem Modell:")
+st.title("Theoretische Überlegungen hinter dem Modell: :mag:")
 st.write("""ProjectFocus: Design a Application for elderly people to detect fall behavior 
 
 FaLLDetector for elderly people: 
