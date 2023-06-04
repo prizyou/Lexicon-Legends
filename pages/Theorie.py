@@ -1,7 +1,7 @@
 import streamlit as st 
 
 st.title("Theoretische Überlegungen hinter dem Modell:")
-st.write("""Project Focus: Design a Application for elderly people to detect fall behavior 
+st.write("""ProjectFocus: Design a Application for elderly people to detect fall behavior 
 
 FaLLDetector for elderly people: 
 
