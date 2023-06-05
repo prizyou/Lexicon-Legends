@@ -144,7 +144,7 @@ if uploaded_file is not None:
         
     
         #Vorhersage Label in Modell
-        st.title("Vorhersage Label in KNN-Modell:")
+        st.title("Vorhersage Labels in KNN-Modell:")
         st.caption("In "+ str(y_pred_knn.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
         
         y_pred_knn = pd.DataFrame(y_pred_knn)
@@ -153,7 +153,7 @@ if uploaded_file is not None:
         y_pred_knn.columns = ['Prediction:  ']
         st.write(y_pred_knn)
 
-        st.title("Vorhersage Label in RF-Modell:")
+        st.title("Vorhersage Labels in RF-Modell:")
         st.caption("In "+ str(y_pred_rf.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
         
         y_pred_rf = pd.DataFrame(y_pred_rf)
