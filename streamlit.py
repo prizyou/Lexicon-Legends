@@ -57,7 +57,10 @@ if uploaded_file is not None:
 
         st.write("Die folgenden Sensoren wurden aufgezeichnet:")
         
-        st.write(data['sensor'].unique())
+        sensoren = data['sensor'].unique()
+        sensoren.columns = ['Sensoren: ']
+
+        st.write(sensoren)
 
         data_acc = data_acc[['z','x','y']]
 
