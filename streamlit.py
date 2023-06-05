@@ -145,10 +145,10 @@ if uploaded_file is not None:
         y_pred_knn = pd.DataFrame(y_pred_knn)
         y_pred_rf = pd.DataFrame(y_pred_rf)
 
-        y_pred_knn.replace(to_replace='0', value="Kein Sturz", inplace=True)
-        y_pred_knn.replace(to_replace='1', value="Sturz", inplace=True)
-        y_pred_rf.replace(to_replace='0', value="Kein Sturz", inplace=True)
-        y_pred_rf.replace(to_replace='1', value="Sturz",inplace=True)
+        y_pred_knn.replace(to_replace=0, value="Kein Sturz", inplace=True)
+        y_pred_knn.replace(to_replace=1, value="Sturz", inplace=True)
+        y_pred_rf.replace(to_replace=0, value="Kein Sturz", inplace=True)
+        y_pred_rf.replace(to_replace=1, value="Sturz",inplace=True)
 
         #Vorhersage Label in Modell
         st.write("Vorhersage Label in KNN-Modell:")
