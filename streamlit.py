@@ -147,7 +147,7 @@ if uploaded_file is not None:
         st.header("Vorhersage Labels in KNN-Modell:")
         st.caption("In "+ str(y_pred_knn.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
         
-        y_pred_knn = pd.DataFrame(y_pred_knn)
+        y_pred_knn = pd.DataFrame(y_pred_knn.highlight_values("Fall"))
         y_pred_knn.replace(to_replace=0, value="Normal", inplace=True)
         y_pred_knn.replace(to_replace=1, value="Fall", inplace=True)
         y_pred_knn.columns = ['Prediction:  ']
@@ -156,7 +156,7 @@ if uploaded_file is not None:
         st.header("Vorhersage Labels in RF-Modell:")
         st.caption("In "+ str(y_pred_rf.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
         
-        y_pred_rf = pd.DataFrame(y_pred_rf)
+        y_pred_rf = pd.DataFrame(y_pred_rf.highlight_values("Fall"))
         y_pred_rf.replace(to_replace=0, value="Normal", inplace=True)
         y_pred_rf.replace(to_replace=1, value="Fall",inplace=True)
         y_pred_rf.columns = ['Prediction:  ']
