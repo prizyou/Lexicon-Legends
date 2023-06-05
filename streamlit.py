@@ -142,8 +142,8 @@ if uploaded_file is not None:
         y_pred_knn = model_knn.predict(features[my_array[0]])
         y_pred_rf = model_rf.predict(features[my_array[0]])
         
-        y_pred_knn.columns = 'Sturz?'
-        y_pred_rf.columns = 'Sturz?'
+        y_pred_knn.replace(to_replace="0", value="Kein Sturz", inplace=True,to_replace="1", value="Sturz", inplace=True)
+        y_pred_rf.replace(to_replace="0", value="Kein Sturz", inplace=True,to_replace="1", value="Sturz", inplace=True)
 
         #Vorhersage Label in Modell
         st.write("Vorhersage Label in KNN-Modell:")
