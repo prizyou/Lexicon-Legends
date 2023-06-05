@@ -141,6 +141,9 @@ if uploaded_file is not None:
         #Schätzungsdaten rausziehen
         y_pred_knn = model_knn.predict(features[my_array[0]])
         y_pred_rf = model_rf.predict(features[my_array[0]])
+        
+        y_pred_knn.columns = ['Sturz?']
+        y_pred_rf.columns = ['Sturz?']
 
         #Vorhersage Label in Modell
         st.write("Vorhersage Label in KNN-Modell:")
