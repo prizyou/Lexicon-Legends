@@ -58,6 +58,7 @@ if uploaded_file is not None:
         st.write("Die folgenden Sensoren wurden aufgezeichnet:")
         
         sensoren = data['sensor'].unique()
+        sensoren = pd.DataFrame(sensoren)
         sensoren.columns = ['Sensoren: ']
 
         st.write(sensoren)
