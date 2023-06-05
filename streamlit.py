@@ -121,9 +121,6 @@ if uploaded_file is not None:
             st.warning("Features werden extrahiert...")    
 
         st.success("Features extrahiert! :)")
-        
-        if st.button('Features als DataFrame'):
-            st.write(features)
 
         st.success("Analyse der Daten mit KNN- und RandomForest Modell...")
         #Vortrainierte Modelle laden
