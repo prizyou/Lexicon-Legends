@@ -151,7 +151,7 @@ if uploaded_file is not None:
         y_pred_knn.replace(to_replace=0, value="Normal", inplace=True)
         y_pred_knn.replace(to_replace=1, value="Fall", inplace=True)
         y_pred_knn.columns = ['Prediction:  ']
-        st.write(y_pred_knn)
+        st.write(y_pred_knn.T)
 
         st.header("Vorhersage Labels in RF-Modell:")
         st.caption("In "+ str(y_pred_rf.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
@@ -160,4 +160,4 @@ if uploaded_file is not None:
         y_pred_rf.replace(to_replace=0, value="Normal", inplace=True)
         y_pred_rf.replace(to_replace=1, value="Fall",inplace=True)
         y_pred_rf.columns = ['Prediction:  ']
-        st.write(y_pred_rf)
+        st.write(y_pred_rf.T)
