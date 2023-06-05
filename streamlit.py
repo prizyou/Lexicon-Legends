@@ -142,19 +142,22 @@ if uploaded_file is not None:
         y_pred_knn = model_knn.predict(features[my_array[0]])
         y_pred_rf = model_rf.predict(features[my_array[0]])
         
-        y_pred_knn = pd.DataFrame(y_pred_knn)
-        y_pred_rf = pd.DataFrame(y_pred_rf)
-
-        y_pred_knn.replace(to_replace=0, value="Kein Sturz", inplace=True)
-        y_pred_knn.replace(to_replace=1, value="Sturz", inplace=True)
-        y_pred_rf.replace(to_replace=0, value="Kein Sturz", inplace=True)
-        y_pred_rf.replace(to_replace=1, value="Sturz",inplace=True)
-
+    
         #Vorhersage Label in Modell
         st.write("Vorhersage Label in KNN-Modell:")
-        st.write(y_pred_knn)
         st.caption("In "+ str(y_pred_knn.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
+        
+        y_pred_knn = pd.DataFrame(y_pred_knn)
+        y_pred_knn.replace(to_replace=0, value="No Fall", inplace=True)
+        y_pred_knn.replace(to_replace=1, value="Fall", inplace=True)
+        
+        st.write(y_pred_knn)
 
         st.write("Vorhersage Label in RF-Modell:")
-        st.write(y_pred_rf)
         st.caption("In "+ str(y_pred_rf.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
+        
+        y_pred_rf = pd.DataFrame(y_pred_rf)
+        y_pred_rf.replace(to_replace=0, value="No Fall", inplace=True)
+        y_pred_rf.replace(to_replace=1, value="Fall",inplace=True)
+        
+        st.write(y_pred_rf)
