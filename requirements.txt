@@ -1,3 +1,10 @@
 streamlit==1.20.0
 pydeck==0.7.1
-sklearn 
+Python==3.7.10
+Streamlit
+Pandas 
+Pydeck
+Numpy
+Scikit-learn
+Matplotlib
+tsfresh
