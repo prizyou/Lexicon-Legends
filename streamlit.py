@@ -135,17 +135,16 @@ if uploaded_file is not None:
         
         my_array = np.asarray(featuresList)
         
-        if st.button('Features als Liste'):
-            st.write(my_array[0])
+        #if st.button('Features als Liste'):
+        #    st.write(my_array[0])
     
         #Schätzungsdaten rausziehen
         y_pred_knn = model_knn.predict(features[my_array[0]])
         y_pred_rf = model_rf.predict(features[my_array[0]])
-        
     
         #Vorhersage Label in Modell
         st.header("Vorhersage Labels in KNN-Modell:")
-        #st.caption("In "+ str(y_pred_knn.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
+        st.caption("In "+ str(y_pred_knn.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
         
         y_pred_knn = pd.DataFrame(y_pred_knn)
         y_pred_knn.replace(to_replace=0, value="Normal", inplace=True)
@@ -154,7 +153,7 @@ if uploaded_file is not None:
         st.write(y_pred_knn.T)
 
         st.header("Vorhersage Labels in RF-Modell:")
-        #st.caption("In "+ str(y_pred_rf.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
+        st.caption("In "+ str(y_pred_rf.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
         
         y_pred_rf = pd.DataFrame(y_pred_rf)
         y_pred_rf.replace(to_replace=0, value="Normal", inplace=True)
