@@ -1,5 +1,5 @@
-streamlit==1.20.0
-pydeck==0.7.1
+streamlit
+pydeck
 Python
 Streamlit
 Pandas
