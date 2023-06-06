@@ -1,5 +1,5 @@
 streamlit==1.23.0
-pydeck==0.6.1
+pydeck==0.8.1b0
 pandas
 pydeck
 numpy
