@@ -1,7 +1,7 @@
 streamlit==1.20.0
 pydeck==0.7.1
-pandas
-pydeck
+python
+pandas 
 numpy
 scikit-learn
 matplotlib
