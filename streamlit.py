@@ -127,18 +127,17 @@ if uploaded_file is not None:
         st.success("Features extrahiert! :)")
 
         st.success("Analyse der Daten mit KNN- und RandomForest Modell...")
+        
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
         model_rf = pk.load(open('rfpickle_file','rb'),)
         featuresList = pk.load(open('featuresList_file','rb'),)
         
-        #st.write(featuresList)
         my_array = np.asarray(featuresList)
         
         if st.button('Features als Liste'):
             st.write(my_array[0])
-        #st.write(type(my_array))
-
+    
         #Schätzungsdaten rausziehen
         y_pred_knn = model_knn.predict(features[my_array[0]])
         y_pred_rf = model_rf.predict(features[my_array[0]])
