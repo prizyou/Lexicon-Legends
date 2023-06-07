@@ -1,6 +1,6 @@
 streamlit==1.23.0
 pydeck==0.7.1
-tsfresh==0.19.0
+tsfresh==0.17.0
 pandas==2.0.0
 numpy
 scikit-learn
