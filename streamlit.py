@@ -120,12 +120,12 @@ if uploaded_file is not None:
         data_combine = data_combine.reset_index(inplace=False)
 
         features = extract_features(data_combine,column_id='id', column_sort='time')
-                
+
         while(features is None):
             st.warning("Features werden extrahiert...")    
 
         st.success("Features extrahiert! :)")
-
+ 
         st.success("Analyse der Daten mit KNN- und RandomForest Modell...")
         
         #Vortrainierte Modelle laden
