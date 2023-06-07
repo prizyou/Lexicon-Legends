@@ -118,7 +118,8 @@ if uploaded_file is not None:
             st.line_chart(data_combine)    
 
         data_combine = data_combine.reset_index(inplace=False)
-        
+        data_combine.to_frame()
+
         features = extract_features(data_combine,column_id='id', column_sort='time').asdataframe()
         
         while(features is None):
