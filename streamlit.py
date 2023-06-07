@@ -119,6 +119,8 @@ if uploaded_file is not None:
 
         data_combine = data_combine.reset_index(inplace=False)
         
+        st.write(data_combine)
+
         features = extract_features(data_combine,column_id='id', column_sort='time')
         
         while(features is None):
