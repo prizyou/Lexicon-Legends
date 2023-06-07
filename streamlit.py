@@ -117,7 +117,7 @@ if uploaded_file is not None:
         if st.button('Sequenzen als Grafik'):
             st.line_chart(data_combine)    
 
-        data_combine = data_combine.reset_index(inplace=False)
+        #data_combine = data_combine.reset_index(inplace=False)
         
         features = extract_features(data_combine,column_id='id', column_sort='time')
         
