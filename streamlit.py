@@ -121,7 +121,8 @@ if uploaded_file is not None:
         if st.button('Sequenzen als Dataframe'):
             st.write(data_combine)
 
-        st.line_chart(data_combine)   
+
+        graph_daten = data_combine
 
         data_combine = data_combine.reset_index(inplace=False)
 
@@ -149,6 +150,8 @@ if uploaded_file is not None:
         y_pred_knn = model_knn.predict(features[my_array[0]])
         y_pred_rf = model_rf.predict(features[my_array[0]])
     
+        st.line_chart(graph_daten)   
+
         #Vorhersage Label in Modell
         st.header("Vorhersage Labels in KNN-Modell:")
         st.caption("In "+ str(y_pred_knn.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
