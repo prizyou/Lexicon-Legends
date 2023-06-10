@@ -23,9 +23,7 @@ st.caption("Ein Projekt von: Anitan, Paul, Max")
 st.write("Das Projekt soll es ermöglichen, Stürze mit Hilfe von Smartphones zu erkennen. Dazu werden die Sensordaten des Smartphones aufgezeichnet und in einem Machine Learning Modell analysiert. Das Modell kann dann in einer App implementiert werden, um Stürze zu erkennen und Hilfe zu rufen.")
 st.write("Die App ist in Python geschrieben und nutzt die Bibliotheken Streamlit, Pandas, Numpy, Scikit-Learn und Tsfresh.")
 st.write("Die App verwendet als Datenquelle SensorLogger aus dem AppStore:")
-st.image("pictures/1.PNG", caption='SensorLogger App',width=300,output_format="auto")
-st.image("pictures/2.PNG", caption='Relevant Sensors',width=300,output_format="auto")
-st.image("pictures/3.PNG", caption='Settings in SensorLogger',width=300,output_format="auto")
+st.image(("pictures/1.PNG","pictures/2.PNG","pictures/3.PNG"), caption='SensorLogger App',width=300,output_format="auto")
 
 st.sidebar.success("Klicke durch die Dokumentation...")
 
