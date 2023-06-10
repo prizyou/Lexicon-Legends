@@ -113,9 +113,7 @@ if uploaded_file is not None:
                 var1 = var1 + 100
                 id+=1
 
-        if st.button('Daten als Dataframe'):
-            st.dataframe(data_combine)
-
+        
         st.header("Vorhersage der Labels in den Modellen:")
 
         st.write("Sequenzen der übertragenen Aufzeichnungen:")
@@ -123,9 +121,7 @@ if uploaded_file is not None:
         if st.button('Sequenzen als Dataframe'):
             st.write(data_combine)
 
-        if st.button('Sequenzen als Grafik'):
-            st.line_chart(data_combine)    
-
+    
         data_combine = data_combine.reset_index(inplace=False)
 
         features = extract_features(data_combine,column_id='id', column_sort='time')
@@ -136,7 +132,9 @@ if uploaded_file is not None:
         st.success("Features extrahiert! :)")
  
         st.success("Analyse der Daten mit KNN- und RandomForest Modell...")
-         
+
+        st.line_chart(data_combine)   
+
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
         model_rf = pk.load(open('rfpickle_file','rb'),)
