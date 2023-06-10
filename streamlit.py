@@ -121,7 +121,8 @@ if uploaded_file is not None:
         if st.button('Sequenzen als Dataframe'):
             st.write(data_combine)
 
-    
+        st.line_chart(data_combine)   
+
         data_combine = data_combine.reset_index(inplace=False)
 
         features = extract_features(data_combine,column_id='id', column_sort='time')
@@ -133,8 +134,7 @@ if uploaded_file is not None:
  
         st.success("Analyse der Daten mit KNN- und RandomForest Modell...")
 
-        st.line_chart(data_combine)   
-
+    
         #Vortrainierte Modelle laden
         model_knn = pk.load(open('knnpickle_file','rb'),)
         model_rf = pk.load(open('rfpickle_file','rb'),)
