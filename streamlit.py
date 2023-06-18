@@ -185,12 +185,11 @@ if uploaded_file is not None:
 
 
 st.title("Theorie:")
-st.write("""Fall Detection via Machine Learning: 
+st.write("""Sturzerkennung mit Machine Learning Modellen: 
 
 https://www.researchgate.net/publication/308467199_Fall_Detection_Using_Machine_Learning_Algorithms
 
-=> The k-NN  were the
-    most reliable system (evidence from paper above)
+=> The k-NN und RF-Modell als Modelle, welche nach den wissenschaftlichen Papern / State of the Art am besten dazu geeignet sind, Stürze zu erkennen
     
  Activity Labels: 
  
