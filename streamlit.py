@@ -189,7 +189,7 @@ st.write("""Sturzerkennung mit Machine Learning Modellen:
 
 https://www.researchgate.net/publication/308467199_Fall_Detection_Using_Machine_Learning_Algorithms
 
-=> The k-NN und RF-Modell als Modelle, welche nach den wissenschaftlichen Papern / State of the Art am besten dazu geeignet sind, Stürze zu erkennen
+=> Das k-NN und RF-Modell als Modelle, welche nach den wissenschaftlichen Papern / State of the Art am besten dazu geeignet sind, Stürze zu erkennen
     
  Activity Labels: 
  
