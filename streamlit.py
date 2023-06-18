@@ -24,7 +24,7 @@ st.write("Das Projekt soll es ermöglichen, Stürze mit Hilfe von Smartphones zu
 st.write("Die App ist in Python geschrieben und nutzt die Bibliotheken Streamlit, Pandas, Numpy, Scikit-Learn und Tsfresh.")
 st.write("Die App verwendet als Datenquelle SensorLogger aus dem AppStore:")
 
-col1, col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.beta_columns([1,1,1])
 with title_container:
     with col1:
         st.image("pictures/1.PNG", caption='SensorLogger App',width=250,output_format="auto")
