@@ -37,7 +37,8 @@ with title_container:
 
 st.write("Die App zeichnet die Sensordaten des Smartphones auf und speichert diese in einer .JSON Datei. Die App kann so eingestellt werden, dass sie nur die relevanten Sensoren aufzeichnet:")
 st.write("Accelerometer, Gyroscope, Orientation, Gravity")
-st.write("Die App kann so eingestellt werden, dass sie nur die relevanten Sensoren aufzeichnet:")
+
+st.title("Applikation:")
 
 st.sidebar.success("Klicke durch die Dokumentation...")
 
