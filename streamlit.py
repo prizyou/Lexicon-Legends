@@ -182,3 +182,6 @@ if uploaded_file is not None:
         y_pred_rf.replace(to_replace=1, value="Fall",inplace=True)
         y_pred_rf.columns = ['Prediction:  ']
         st.write(y_pred_rf.T)
+
+
+        st.title("Theorie:")
