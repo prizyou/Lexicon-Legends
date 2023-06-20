@@ -171,7 +171,7 @@ if uploaded_file is not None:
         y_pred_knn = pd.DataFrame(y_pred_knn)
         y_pred_knn.replace(to_replace=0, value="Normal", inplace=True)
         y_pred_knn.replace(to_replace=1, value="Fall", inplace=True)
-        y_pred_knn.rename(columns={ '0':'1', '1':'2' }, inplace=True)
+        y_pred_knn.rename({ '0':'1', '1':'2' },axis=1, inplace=True)
         y_pred_knn.columns = ['Prediction:  ']
         st.write(y_pred_knn.T)
 
