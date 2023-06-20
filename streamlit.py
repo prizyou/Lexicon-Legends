@@ -155,7 +155,7 @@ if uploaded_file is not None:
         my_array = np.asarray(featuresList)
         
         if st.button('Features als Liste'):
-            st.write(type(featuresList))
+            st.write(featuresList[0:50])
 
         #Schätzungsdaten rausziehen
         y_pred_knn = model_knn.predict(features[my_array[0]])
