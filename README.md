@@ -31,6 +31,8 @@ https://www.researchgate.net/publication/353576862_Latest_Research_Trends_in_Fal
 
 Entwurf der Streamlit APP: Auswahl (Dropdown Menue zwischen 2-3 verschiedenen Modellen, womit man die Aktivitaeten erkennen kann) -> Label Fall vorhanden oder nicht (eventuell dann auch mit der Zeitangabe, wann dieser Fall vorgelegen hat)
 
+https://prizyou-lexicon-legends-streamlit-0m42bg.streamlit.app/
+
 Zunaechst Datei Import ermoeglichen mit Kachel Drag&Drop Funktion
 
 Threshold Decision Tree recherchieren!: 
