@@ -158,7 +158,7 @@ if uploaded_file is not None:
             st.write(featuresList)
 
         #Schätzungsdaten rausziehen
-        y_pred_knn = model_knn.predict(features[my_array[0]])
+        y_pred_knn = model_knn.predict(features[[my_array[0]]])
         y_pred_rf = model_rf.predict(features[my_array[0]])
 
         st.caption("Plot der Rohdaten:")
