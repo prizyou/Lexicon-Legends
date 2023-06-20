@@ -194,11 +194,10 @@ st.write("""Sturzerkennung mit Machine Learning Modellen:
  
 - Stehen
 - Gehen
-- Springen
 - Treppe hochlaufen (UP)
 - Treppe herunterlaufen (DOWN)
 - Sitzen
-- Sich auf einen Stuhl setzen
+- Sich ins Bett legen
 
 Wissenscahftliche Arbeiten/ Referenzen:
 
