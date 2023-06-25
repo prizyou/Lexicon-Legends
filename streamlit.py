@@ -106,7 +106,7 @@ if uploaded_file is not None:
         #data_acc = data_acc.reset_index(inplace=True)
         #data_gyro = data_gyro.reset_index(inplace=True)
 
-        data_combine = data_acc.join(data_gyro)
+        data_combine = data_acc.join(data_gyro, how='inner')
 
         st.write(data_combine)
 
