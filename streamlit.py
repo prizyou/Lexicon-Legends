@@ -103,10 +103,10 @@ if uploaded_file is not None:
         if st.button('Gravity'):
             st.line_chart(data_gravity)
 
-        data_acc = data_acc.reset_index(inplace=True)
-        data_gyro = data_gyro.reset_index(inplace=True)
+        #data_acc = data_acc.reset_index(inplace=True)
+        #data_gyro = data_gyro.reset_index(inplace=True)
 
-        data_combine = pd.merge(data_acc, data_gyro, on='time')
+        data_combine = pd.merge(data_acc, data_gyro, left_index=True, right_index=True)
 
         st.write(data_combine)
 
