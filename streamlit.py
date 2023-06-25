@@ -108,7 +108,7 @@ if uploaded_file is not None:
 
         data_combine = pd.merge(data_acc, data_gyro, left_index=True, right_index=True)
 
-        #st.write(data_combine)
+        st.write(data_combine)
 
         #Aufteilung des Datensatzes in Sequenzen
         data_combine['id'] = 0
