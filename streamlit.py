@@ -106,7 +106,7 @@ if uploaded_file is not None:
         #data_acc = data_acc.reset_index(inplace=True)
         #data_gyro = data_gyro.reset_index(inplace=True)
 
-        data_combine = pd.concat(data_acc, data_gyro, axis=1, join='inner')
+        data_combine = pd.concat(data_acc, data_gyro, axis=1)
 
         st.write(data_combine)
 
