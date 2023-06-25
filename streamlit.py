@@ -103,10 +103,10 @@ if uploaded_file is not None:
         if st.button('Gravity'):
             st.line_chart(data_gravity)
 
-        #data_acc = data_acc.reset_index(inplace=True)
-        #data_gyro = data_gyro.reset_index(inplace=True)
+        data_acc = data_acc.reset_index(inplace=True)
+        data_gyro = data_gyro.reset_index(inplace=True)
 
-        data_combine = data_acc.join(data_gyro, how='inner')
+        data_combine = data_acc.join(data_gyro)
 
         st.write(data_combine)
 
