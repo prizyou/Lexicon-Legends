@@ -147,7 +147,7 @@ if uploaded_file is not None:
             st.write(data_combine)
 
 
-        graph_daten = data_combine.drop(columns=['id'])
+        graph_daten = data_combine.drop(columns=['index'])
 
         data_combine = data_combine.reset_index(inplace=False)
 
