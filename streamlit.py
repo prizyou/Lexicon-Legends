@@ -104,8 +104,6 @@ if uploaded_file is not None:
         if st.button('Gravity'):
             st.line_chart(data_gravity)
 
-        #data_acc = data_acc.reset_index(inplace=True)
-        #data_gyro = data_gyro.reset_index(inplace=True)
 
         data_acc['index'] = 0
         data_gyro['index'] = 0
@@ -134,7 +132,7 @@ if uploaded_file is not None:
         var1 = 100
 
         for i in range(0, len(data_combine)):
-            data_combine.iloc[i,6] = id
+            data_combine.iloc[i,13] = id
             
             if i >= var1: 
                 var1 = var1 + 100
