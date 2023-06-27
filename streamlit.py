@@ -106,7 +106,19 @@ if uploaded_file is not None:
         #data_acc = data_acc.reset_index(inplace=True)
         #data_gyro = data_gyro.reset_index(inplace=True)
 
-        data_combine = pd.merge(data_acc,data_gyro, how="inner",left_index=True, right_index=True)
+        data_acc['index'] = 0
+        data_gyro['index'] = 0
+        data_or['index'] = 0
+        data_gravity['index'] = 0
+
+        for i in range(len(data_acc)):
+            data_acc.iloc[i,4] = i
+            data_gyro.iloc[i,4] = i
+            data_or.iloc[i,5] = i
+            data_gravity.iloc[i,4] = i        
+
+
+        data_combine = pd.merge(data_acc,data_gyro, how="inner",on = "index")
 
         st.write(data_combine)
 
