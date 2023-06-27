@@ -121,7 +121,7 @@ if uploaded_file is not None:
         data_combine = pd.merge(data_combine,data_or, how="inner",on="index")
         data_combine = pd.merge(data_combine,data_gravity, how="inner",on="index")
 
-        data_combine = data_combine.drop(columns=['index'])
+        #data_combine = data_combine.drop(columns=['index'])
 
         st.write(data_combine)
 
