@@ -92,7 +92,7 @@ if uploaded_file is not None:
         data_gravity = data_gravity[['z','x','y']]
 
         data_gyro.rename(columns={ 'z': 'gz' , 'x': 'gx' , 'y': 'gy'}, inplace=True)
-        df_walk_grav.rename(columns={ 'z': 'grav_z' , 'x': 'grav_x' , 'y': 'grav_y'}, inplace=True)
+        data_gravity.rename(columns={ 'z': 'grav_z' , 'x': 'grav_x' , 'y': 'grav_y'}, inplace=True)
 
         st.write("Darstellung der aufbereiteten Daten:")
         if st.button('Beschleunigungssensor'):
