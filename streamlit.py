@@ -151,7 +151,7 @@ if uploaded_file is not None:
 
         data_combine = data_combine.reset_index(inplace=False)
 
-        features = extract_features(data_combine,column_id='id', column_sort='time')
+        features = extract_features(data_combine,column_id='id', column_sort='index')
 
         while(features is None):
             st.warning("Features werden extrahiert...")    
