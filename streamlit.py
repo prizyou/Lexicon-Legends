@@ -111,6 +111,8 @@ if uploaded_file is not None:
         data_or['index'] = 0
         data_gravity['index'] = 0
 
+        st.write(data_acc)
+
         for i in range(len(data_acc)):
             data_acc.iloc[i,4] = i
             data_gyro.iloc[i,4] = i
