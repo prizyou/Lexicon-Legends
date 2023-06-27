@@ -111,7 +111,7 @@ if uploaded_file is not None:
         data_or['index'] = 0
         data_gravity['index'] = 0
 
-        st.write(data_gravity)
+        st.write(data_or)
 
         for i in range(len(data_acc)):
             data_acc.iloc[i,3] = i
