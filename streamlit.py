@@ -111,8 +111,6 @@ if uploaded_file is not None:
         data_or['index'] = 0
         data_gravity['index'] = 0
 
-        st.write(data_or)
-
         for i in range(len(data_acc)):
             data_acc.iloc[i,3] = i
             data_gyro.iloc[i,3] = i
@@ -120,6 +118,10 @@ if uploaded_file is not None:
             data_gravity.iloc[i,3] = i        
 
         data_combine = pd.merge(data_acc,data_gyro, how="inner",on="index")
+        data_combine = pd.merge(data_combine,data_or, how="inner",on="index")
+        data_combine = pd.merge(data_combine,data_gravity, how="inner",on="index")
+
+        data_combine = data_combine.drop(columns=['index'])
 
         st.write(data_combine)
 
