@@ -92,6 +92,7 @@ if uploaded_file is not None:
         data_gravity = data_gravity[['z','x','y']]
 
         data_gyro.rename(columns={ 'z': 'gz' , 'x': 'gx' , 'y': 'gy'}, inplace=True)
+        df_walk_grav.rename(columns={ 'z': 'grav_z' , 'x': 'grav_x' , 'y': 'grav_y'}, inplace=True)
 
         st.write("Darstellung der aufbereiteten Daten:")
         if st.button('Beschleunigungssensor'):
@@ -121,7 +122,7 @@ if uploaded_file is not None:
         data_combine = pd.merge(data_combine,data_or, how="inner",on="index")
         data_combine = pd.merge(data_combine,data_gravity, how="inner",on="index")
 
-        #data_combine = data_combine.drop(columns=['index'])
+        data_combine = data_combine.drop(columns=['index'])
 
         st.write(data_combine)
 
