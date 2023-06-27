@@ -22,7 +22,7 @@ st.caption("Ein Projekt von: Anitan, Paul, Max")
 
 st.write("Das Projekt soll es ermöglichen, Stürze mit Hilfe von Smartphones zu erkennen. Dazu werden die Sensordaten des Smartphones aufgezeichnet und in einem Machine Learning Modell analysiert. Das Modell kann dann in einer App implementiert werden, um Stürze zu erkennen und Hilfe zu rufen.")
 st.write("Die App ist in Python geschrieben und nutzt die Bibliotheken Streamlit, Pandas, Numpy, Scikit-Learn und Tsfresh.")
-st.write("Die App verwendet als Datenquelle SensorLogger aus dem AppStore:")
+st.write("Diese verwendet als Datenquelle SensorLogger aus dem AppStore:")
 
 col1, col2, col3 = st.beta_columns([1,1,1])
 title_container = st.beta_container()
@@ -35,7 +35,7 @@ with title_container:
     with col3:
         st.image("pictures/3.PNG", caption='Settings in SensorLogger',width=250,output_format="auto")   
 
-st.write("Die App zeichnet die Sensordaten des Smartphones auf und speichert diese in einer .JSON Datei. Die App kann so eingestellt werden, dass sie nur die relevanten Sensoren aufzeichnet:")
+st.write("Es werden Sensordaten des Smartphones aufgezeichnet und diese in einer .JSON Datei abgespeichert. Die App kann so eingestellt werden, dass sie nur die relevanten Sensoren aufzeichnet:")
 st.write("Accelerometer, Gyroscope, Orientation, Gravity")
 
 st.title("Applikation:")
