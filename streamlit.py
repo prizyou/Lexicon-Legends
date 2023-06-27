@@ -117,7 +117,7 @@ if uploaded_file is not None:
             data_acc.iloc[i,3] = i
             data_gyro.iloc[i,3] = i
             data_or.iloc[i,4] = i
-            data_gravity.iloc[i,4] = i        
+            data_gravity.iloc[i,3] = i        
 
         data_combine = pd.merge(data_acc,data_gyro, how="inner",on = "index")
 
