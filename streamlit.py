@@ -178,7 +178,8 @@ if uploaded_file is not None:
         st.caption("Plot der Rohdaten:")
         st.line_chart(graph_daten)
 
-        if st.checkbox("show"):   
+        if st.selectbox("show"):
+
 
         #Vorhersage Label in Modell
         st.header("Vorhersage Labels in KNN-Modell:")
