@@ -178,9 +178,10 @@ if uploaded_file is not None:
         st.caption("Plot der Rohdaten:")
         st.line_chart(graph_daten)
 
-        if st.checkbox("show"):
-            st.line_chart(graph_daten)
-            
+        st.caption("Plot der Sensoren:")
+        if st.checkbox("Beschleunigungssensor"):
+            st.line_chart(graph_daten[['z','x','y',"id"]])
+        
         #Vorhersage Label in Modell
         st.header("Vorhersage Labels in KNN-Modell:")
         st.caption("In "+ str(y_pred_knn.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
