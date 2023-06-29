@@ -179,9 +179,20 @@ if uploaded_file is not None:
         st.line_chart(graph_daten)
 
         st.caption("Plot der Sensoren:")
+
         if st.checkbox("Beschleunigungssensor"):
-            st.line_chart(graph_daten[['z','x','y',"id"]])
+            st.line_chart(graph_daten[['z','x','y','id']])
         
+        if st.checkbox("Gyroskop"):
+            st.line_chart(graph_daten[['gz','gx','gy','id']])
+        
+        if st.checkbox("Orientation"):
+            st.line_chart(graph_daten[['qx','qz','qw','qy','id']])
+        
+        if st.checkbox("Gravity"):
+            st.line_chart(graph_daten[['grav_z','grav_x','grav_y',"id"]])
+        
+
         #Vorhersage Label in Modell
         st.header("Vorhersage Labels in KNN-Modell:")
         st.caption("In "+ str(y_pred_knn.sum()) + " der übertragenen " + str(data_combine['id'].unique().max()) + " Sequenzen aus der Aufzeichnung liegt vermutlich ein Sturz vor")
