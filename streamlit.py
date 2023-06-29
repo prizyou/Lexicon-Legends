@@ -122,8 +122,6 @@ if uploaded_file is not None:
 
         #data_combine = data_combine.drop(columns=['index'])
 
-        st.write(data_combine)
-
         #Aufteilung des Datensatzes in Sequenzen
         data_combine['id'] = 0
 
