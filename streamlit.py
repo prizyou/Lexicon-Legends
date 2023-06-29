@@ -176,7 +176,9 @@ if uploaded_file is not None:
         y_pred_rf = model_rf.predict(features[[my_array[0]]])
 
         st.caption("Plot der Rohdaten:")
-        st.line_chart(graph_daten)   
+        st.line_chart(graph_daten)
+
+        if st.checkbox("show"):   
 
         #Vorhersage Label in Modell
         st.header("Vorhersage Labels in KNN-Modell:")
