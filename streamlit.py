@@ -178,16 +178,16 @@ if uploaded_file is not None:
 
         st.caption("Plot der Sensoren:")
 
-        if st.button("Beschleunigungssensor"):
+        if st.button("Beschleunigungssensor_Seqenzen"):
             st.line_chart(graph_daten[['z','x','y','id']])
         
-        if st.button("Gyroskop"):
+        if st.button("Gyroskop_Sequenzen"):
             st.line_chart(graph_daten[['gz','gx','gy','id']])
         
-        if st.button("Orientation"):
+        if st.button("Orientation_Sequenzen"):
             st.line_chart(graph_daten[['qx','qz','qw','qy','id']])
         
-        if st.button("Gravity"):
+        if st.button("Gravity_Sequenzen"):
             st.line_chart(graph_daten[['grav_z','grav_x','grav_y',"id"]])
         
 
