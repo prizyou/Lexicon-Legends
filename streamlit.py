@@ -35,6 +35,8 @@ with title_container:
     with col3:
         st.image("pictures/3.PNG", caption='Settings in SensorLogger',width=250,output_format="auto")   
 
+st.image("pictures/4.PNG", caption='SensorLogger App: Haken setzen',width=250,output_format="auto")
+
 st.write("Es werden Sensordaten des Smartphones aufgezeichnet und diese in einer .JSON Datei abgespeichert. Die App kann so eingestellt werden, dass sie nur die relevanten Sensoren aufzeichnet:")
 st.write("Accelerometer, Gyroscope, Orientation, Gravity")
 
