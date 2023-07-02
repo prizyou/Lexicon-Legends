@@ -129,13 +129,13 @@ if uploaded_file is not None:
 
         id = 1
 
-        var1 = 100
+        var1 = 200
 
         for i in range(0, len(data_combine)):
             data_combine.iloc[i,14] = id
             
             if i >= var1: 
-                var1 = var1 + 100
+                var1 = var1 + 200
                 id+=1
 
         
