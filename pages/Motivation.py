@@ -6,7 +6,7 @@ st.write("FallDetector hat den Anspruch Stürze zu erkennen und diese zu melden 
 st.title("Der Prozess zur Ideenentwicklung:")
 
 st.write("Unsere Ideen waren vielseitig...")
-if st.box("Untergrunderkennung für Fahrrad, Skateboard, E-Scooter"):
+if st.button("Untergrunderkennung für Fahrrad, Skateboard, E-Scooter"):
     st.write("")
 if st.button("Risikoprofil für Autofahrer"):
     st.write("")
