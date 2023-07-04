@@ -6,13 +6,13 @@ st.title("FallDetector hat den Anspruch Stürze zu erkennen und diese zu melden 
 st.title("Der Prozess zur Ideenentwicklung:")
 
 st.title("Unsere Ideen waren vielseitig...")
-if st.box("Untergrunderkennung für Fahrrad, Skateboard, E-Scooter")
+if st.box("Untergrunderkennung für Fahrrad, Skateboard, E-Scooter"):
     st.write("")
-if st.button("Risikoprofil für Autofahrer")
+if st.button("Risikoprofil für Autofahrer"):
     st.write("")
-if st.button("Herzfrequenz bei sportlichen Aktivitäten: Krankheitsbild erkennen")
+if st.button("Herzfrequenz bei sportlichen Aktivitäten: Krankheitsbild erkennen"):
     st.write("")
-if st.button("Sturzerkennung für ältere Menschen")
+if st.button("Sturzerkennung für ältere Menschen"):
     st.write("")
 
 st.title("Die finale Idee")
