@@ -18,7 +18,7 @@ if st.button("Sturzerkennung für ältere Menschen"):
 st.title("Die finale Idee")
 st.write("")
 
-st.tilte("Anspruch an die App:")
+st.title("Anspruch an die App:")
 st.markdown("- Stürze erkennen")
 st.markdown("- Alltägliche Verhaltensweisen von Stürzen abgrenzen") 
 st.markdown("- Stürze melden")
