@@ -1,42 +1,35 @@
-Project Focus: Design a Application for elderly people to detect fall behavior 
+Sturzerkennung mittels der App SensorLogger:
 
-FaLL Detection for elderly people: 
+Sturzerkennung mit FaLLDetector:copyright: 
+Ein Projekt von: Anitan, Paul, Max
 
-GOAL for app deployment is to increase accuracy in fall detection models by comparing different models 
+Das Projekt soll es ermöglichen, Stürze mit Hilfe von Smartphones zu erkennen. Dazu werden die Sensordaten des Smartphones aufgezeichnet und in einem Machine Learning Modell analysiert. Das Modell kann dann in einer App implementiert werden, um Stürze zu erkennen und Hilfe zu rufen.")
+Die App ist in Python geschrieben und nutzt die Bibliotheken Streamlit, Pandas, Numpy, Scikit-Learn und Tsfresh.
+Diese verwendet als Datenquelle SensorLogger aus dem AppStore:
 
-Documentation links to literature: 
+Es werden Sensordaten des Smartphones aufgezeichnet und diese in einer .JSON Datei abgespeichert. Die App kann so eingestellt werden, dass sie nur die relevanten Sensoren aufzeichnet:
+Accelerometer, Gyroscope, Orientation, Gravity
 
-Fall Detection via Machine Learning: 
 
-https://www.researchgate.net/publication/308467199_Fall_Detection_Using_Machine_Learning_Algorithms
-
-=> The k-NN  were the
-    most reliable system (evidence from paper above)
+=> Das k-NN und RF-Modell als Modelle, welche nach den wissenschaftlichen Papern / State of the Art am besten dazu geeignet sind, Stürze zu erkennen
     
- Activity Labels: 
+ Aktivitäts Labels: 
  
-- Standing
-- Walking
-- Jogging
-- Jumping
-- Stairs (UP)
-- Stairs (DOWN)
-- Sitting
-    
+- Stehen
+- Gehen
+- Treppe hochlaufen (UP)
+- Treppe herunterlaufen (DOWN)
+- Sitzen
+- Sich ins Bett legen
+
+Wissenscahftliche Arbeiten/ Referenzen:
+
 https://www.sciencedirect.com/science/article/pii/S1877050918318398
 
 https://kth.diva-portal.org/smash/get/diva2:1230962/FULLTEXT01.pdf
 
+https://www.researchgate.net/publication/308467199_Fall_Detection_Using_Machine_Learning_Algorithms
+
 https://www.researchgate.net/publication/353576862_Latest_Research_Trends_in_Fall_Detection_and_Prevention_Using_Machine_Learning_A_Systematic_Review
 
-Entwurf der Streamlit APP: Auswahl (Dropdown Menue zwischen 2-3 verschiedenen Modellen, womit man die Aktivitaeten erkennen kann) -> Label Fall vorhanden oder nicht (eventuell dann auch mit der Zeitangabe, wann dieser Fall vorgelegen hat)
-
-https://prizyou-lexicon-legends-streamlit-0m42bg.streamlit.app/
-
-Zunaechst Datei Import ermoeglichen mit Kachel Drag&Drop Funktion
-
-Threshold Decision Tree recherchieren!: 
-
-=>>>>>>> https://github.com/ignaciocordova/Online-Fall-Detection-Python/blob/main/A%20smartphone-based%20online%20system%20for%20fall%20detection%20with%20alert%20notifications%20and%20contextual%20information%20of%20real-life%20falls.pdf
-
-https://jneuroengrehab.biomedcentral.com/articles/10.1186/s12984-021-00918-z
+https://jneuroengrehab.biomedcentral.com/articles/10.1186/s12984-021-00918-z"""
