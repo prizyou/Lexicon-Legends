@@ -1,11 +1,11 @@
 import streamlit as st
 
 st.title("Herzlich Willkommen zu FallDetector, die App zu ihrem oder dem Schutz ihrer Liebsten")
-st.title("FallDetector hat den Anspruch Stürze zu erkennen und diese zu melden und von alltäglichen Verhaltensweisen abgrenzen zu können.")
+st.write("FallDetector hat den Anspruch Stürze zu erkennen und diese zu melden und von alltäglichen Verhaltensweisen abgrenzen zu können.")
 
 st.title("Der Prozess zur Ideenentwicklung:")
 
-st.title("Unsere Ideen waren vielseitig...")
+st.write("Unsere Ideen waren vielseitig...")
 if st.box("Untergrunderkennung für Fahrrad, Skateboard, E-Scooter"):
     st.write("")
 if st.button("Risikoprofil für Autofahrer"):
