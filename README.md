@@ -3,7 +3,8 @@ Sturzerkennung mittels der App SensorLogger:
 Sturzerkennung mit FaLLDetector:copyright: 
 Ein Projekt von: Anitan, Paul, Max
 
-Das Projekt soll es ermöglichen, Stürze mit Hilfe von Smartphones zu erkennen. Dazu werden die Sensordaten des Smartphones aufgezeichnet und in einem Machine Learning Modell analysiert. Das Modell kann dann in einer App implementiert werden, um Stürze zu erkennen und Hilfe zu rufen.")
+Das Projekt soll es ermöglichen, Stürze mit Hilfe von Smartphones zu erkennen. Dazu werden die Sensordaten des Smartphones aufgezeichnet und in einem Machine Learning Modell analysiert. Das Modell kann dann in einer App implementiert werden, um Stürze zu erkennen und Hilfe zu rufen.
+
 Die App ist in Python geschrieben und nutzt die Bibliotheken Streamlit, Pandas, Numpy, Scikit-Learn und Tsfresh.
 Diese verwendet als Datenquelle SensorLogger aus dem AppStore:
 
