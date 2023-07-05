@@ -17,9 +17,6 @@ if st.button("Herzfrequenz bei sportlichen Aktivitäten: Krankheitsbild erkennen
 if st.button("Sturzerkennung für ältere Menschen"):
     st.write("Beschleunigungssensor, Gyroskop, Orientation und Gravity Sensoren als Ausgangspunkt für die Erkennung und Warnung von Stürzen")
 
-st.title("Die finale Idee")
-st.write("")
-
 st.title("Anspruch an die App:")
 st.markdown("- Stürze erkennen")
 st.markdown("- Alltägliche Verhaltensweisen von Stürzen abgrenzen") 
