@@ -233,7 +233,7 @@ st.write("""Sturzerkennung mit Machine Learning Modellen:
 
 """)
 
-st.header("""Wissenschaftliche Quellen:
+st.subheader("""Wissenschaftliche Quellen:
 
 https://www.sciencedirect.com/science/article/pii/S1877050918318398
 
