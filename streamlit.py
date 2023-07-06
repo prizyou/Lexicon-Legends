@@ -231,7 +231,9 @@ st.write("""Sturzerkennung mit Machine Learning Modellen:
 - Sitzen
 - Sich ins Bett legen
 
-Wissenschaftliche Arbeiten/ Referenzen:
+""")
+
+st.title("""Wissenschaftliche Quellen:
 
 https://www.sciencedirect.com/science/article/pii/S1877050918318398
 
