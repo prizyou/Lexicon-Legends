@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Struktur angelehnt an Crisp-DM:")
+st.title("Struktur angelehnt an CRISP-DM:")
 
 st.image("pictures/5.PNG", caption='CRISP-DM',width=500,output_format="auto")
 st.title("- Business Understanding")
