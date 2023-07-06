@@ -17,7 +17,7 @@ st.set_page_config(
     layout="wide",
 )
 
-st.title("Sturzerkennung mit FaLLDetector:  :mag:")
+st.title("Fall Detection Model:  :mag:")
 st.caption("Ein Projekt von: Anitan, Paul, Max")
 
 st.write("Das Projekt soll es ermöglichen, Stürze mit Hilfe von Smartphones zu erkennen. Dazu werden die Sensordaten des Smartphones aufgezeichnet und in einem Machine Learning Modell analysiert. Das Modell kann dann in einer App implementiert werden, um Stürze zu erkennen und Hilfe zu rufen.")
